@@ -108,7 +108,6 @@ namespace FractionCalculator
             int numerator;
             int denominator;
             bool successFlag = true;
-
             do
             {
                 try
@@ -123,11 +122,6 @@ namespace FractionCalculator
                     }
                     else
                     {
-                        if (denominator < 0)
-                        {
-                            denominator *= -1;
-                            numerator *= -1;
-                        }
                         successFlag = true;
                         return new SimpleFraction(numerator, denominator);
                     }
@@ -198,7 +192,6 @@ namespace FractionCalculator
                         key = 'q';
                         break;
                 }
-
             } while (key != 'q' && key != 'Q');
             Console.ReadKey();
         }
